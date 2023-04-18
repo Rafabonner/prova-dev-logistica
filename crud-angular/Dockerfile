@@ -1,7 +1,13 @@
-FROM node:18.13.0-alpine
-WORKDIR /usr/src/app
+FROM node:16-alpine
+
+WORKDIR /app
+
 COPY package*.json ./
-RUN npm install
+
+RUN npm install -g @angular/cli @angular-devkit/build-angular && npm install
+
 COPY . .
-# RUN npm run build --prod
-CMD ["npm", "run", "start"]
+
+EXPOSE 4200
+
+CMD ["npm", "start"]
