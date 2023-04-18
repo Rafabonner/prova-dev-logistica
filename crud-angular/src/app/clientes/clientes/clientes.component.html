@@ -1,0 +1,30 @@
+<mat-card>
+<form class="filtro" [formGroup]="form">
+  <input class="input_filtro" type="text" formControlName="name"  placeholder="Nome" id="name">
+  <input class="input_filtro" type="text" formControlName="cnpj" placeholder="Cnpj" id="cnpj">
+  <input class="input_filtro" type="text" formControlName="cep" placeholder="Cep" id="cep">
+  <input class="input_filtro" type="text" formControlName="cidade" placeholder="Cidade" id="cidade">
+  <input class="input_filtro" type="text" formControlName="bairro" placeholder="Bairro" id="bairro">
+  <input class="input_filtro" type="text" formControlName="numero" placeholder="Numero" id="numero"><br><br>
+
+</form>
+</mat-card>
+<mat-card>
+  <mat-toolbar color="primary">Tabela de Clientes</mat-toolbar>
+
+  <app-clientes-list
+   *ngIf="!isLoading; else loading"
+   [clientes]="clientesFiltrados"
+   (add)="onAdd()"
+   (edit)="onEdit($event)"
+   (remove)="onRemove($event)"
+  ></app-clientes-list>
+
+
+<ng-template #loading>
+  <div class="loading-spinner">
+  <mat-spinner></mat-spinner>
+  </div>
+</ng-template>
+
+</mat-card>

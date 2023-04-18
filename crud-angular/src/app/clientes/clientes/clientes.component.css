@@ -1,0 +1,27 @@
+.mat-mdc-card{
+  margin-right: 40px;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+.loading-spinner{
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filtro{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input_filtro{
+  width: 30%;
+ margin : 10px;
+ padding: 5px;
+}
+
+
+

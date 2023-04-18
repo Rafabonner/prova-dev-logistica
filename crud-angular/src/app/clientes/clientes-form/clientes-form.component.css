@@ -1,0 +1,29 @@
+.mat-mdc-card{
+  margin-right: 40px;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+mat-card{
+  text-align: center;
+  padding: 10px;
+}
+
+.mdc-card__actions{
+  justify-content: center;
+  margin: 10px;
+}
+
+.full-width{
+ width: 45%;
+ padding: 10px;
+}
+
+.min-width{
+  width: 100%;
+  min-width: 150px;
+}
+
+button{
+  margin: 10px;
+}
